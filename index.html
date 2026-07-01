@@ -3,89 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#eef5ff">
+  <meta name="theme-color" content="#07111f">
   <meta name="robots" content="index,follow">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>Free2AI - 高端 AI API 中转导航 | GPT5 Claude6 Gemini 主题页</title>
-  <meta name="description" content="Free2AI 是高端大气的 AI API 中转导航页，突出 free2ai.pages.dev 与 pay.kklt.lol 两个跳转按钮，面向 GPT5、Claude6、Gemini、OpenAI API 与 AIGC 场景。">
-  <meta name="keywords" content="ai api,gpt api,openai api,claude api,gemini api,ai gateway,api proxy,ai-router,free ai,aigc tools,chatgpt relay,openai relay,telegram support,readme theme">
+  <title>Free2AI - 免费 AI API 中转站 | GPT5.5 Claude Gemini 低成本调用</title>
+  <meta name="description" content="Free2AI 提供免费试用友好的 AI API 中转导航，快速进入 GPT5.5、Claude、Gemini、OpenAI API 与 AIGC 工具低成本调用入口。">
+  <meta name="keywords" content="free ai,ai api,gpt api,gpt5,claude,gemini,openai api,chatgpt relay,ai gateway,api proxy,ai-router,aigc tools,free ai relay">
   <style>
-    :root{--bg:#eef5ff;--panel:rgba(255,255,255,.92);--surface:#fff;--soft:#f7fbff;--text:#14253b;--muted:#5d6f85;--line:rgba(55,88,135,.14);--blue:#2563eb;--cyan:#06b6d4;--green:#16a34a;--shadow:0 24px 60px rgba(32,64,110,.14)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;color:var(--text);background:linear-gradient(180deg,#fbfdff 0%,#eef5ff 100%)} a{color:inherit;text-decoration:none}
-    .wrap{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:24px 0 36px}
-    .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(245,250,255,.92));box-shadow:var(--shadow);backdrop-filter:blur(14px);padding:26px}
-    .hero::before{content:"";position:absolute;inset:-120px -80px auto auto;width:360px;height:360px;background:radial-gradient(circle,rgba(37,99,235,.18),transparent 60%);pointer-events:none}
-    .hero::after{content:"";position:absolute;left:-120px;bottom:-120px;width:360px;height:360px;background:radial-gradient(circle,rgba(6,182,212,.12),transparent 62%);pointer-events:none}
-    .brandline{display:flex;align-items:center;gap:14px;min-width:0;position:relative;z-index:1}.logo{width:54px;height:54px;border-radius:16px;background:linear-gradient(145deg,#fff,#deefff);border:1px solid var(--line);display:grid;place-items:center;flex:0 0 auto;box-shadow:0 10px 24px rgba(37,99,235,.08)}
-    .brandtext{min-width:0}.brandtext h1{margin:0;font-size:18px;line-height:1.2;letter-spacing:0}.brandtext p{margin:4px 0 0;color:var(--muted);font-size:12px}
-    .headline{position:relative;z-index:1;margin:18px 0 10px;font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:0;max-width:12ch}.copy{position:relative;z-index:1;margin:0;max-width:820px;color:#34485f;font-size:15px;line-height:1.9}
-    .actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border-radius:14px;border:1px solid var(--line);background:var(--surface);font-weight:800;font-size:15px;letter-spacing:0;box-shadow:0 12px 26px rgba(20,37,59,.08)}
-    .btn.primary{background:linear-gradient(180deg,#2f80ed,#2563eb);color:#fff;border-color:rgba(37,99,235,.3)}.btn.secondary{background:linear-gradient(180deg,#ffffff,#eef8ff);color:var(--blue)}.btn.ghost{background:rgba(255,255,255,.9)}
-    .badge-row{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.badge{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.82);font-size:12px;font-weight:700;color:#244161}
-    .layout{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}.panel{border:1px solid var(--line);border-radius:22px;background:var(--panel);box-shadow:var(--shadow);backdrop-filter:blur(12px);padding:18px}.panel h2{margin:0 0 12px;font-size:20px}.panel p{margin:0;color:var(--muted);font-size:14px;line-height:1.85}
-    .list{display:grid;gap:12px}.item{padding:16px;border-radius:18px;background:var(--soft);border:1px solid rgba(37,99,235,.1)}.item h3{margin:0 0 8px;font-size:16px}.item p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:16px;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 28px rgba(20,37,59,.06)}.card h3{margin:0 0 8px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}
-    .section{margin-top:16px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:18px 0 12px}.section-title h2{margin:0;font-size:22px}.section-title span{color:var(--muted);font-size:13px}
-    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
-    @media (max-width:860px){.layout,.grid{grid-template-columns:1fr}.headline{max-width:none;font-size:clamp(32px,11vw,52px)}.hero{padding:20px}.btn{width:100%}}
+    :root{--bg:#07111f;--panel:rgba(255,255,255,.08);--panel-strong:rgba(255,255,255,.13);--text:#f8fbff;--muted:#b9c7d9;--line:rgba(255,255,255,.16);--blue:#3b82f6;--cyan:#22d3ee;--green:#22c55e;--gold:#fbbf24;--shadow:0 28px 80px rgba(0,0,0,.34)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei","PingFang SC",sans-serif;color:var(--text);background:radial-gradient(circle at 12% 10%,rgba(34,211,238,.2),transparent 30rem),radial-gradient(circle at 86% 4%,rgba(59,130,246,.28),transparent 32rem),linear-gradient(180deg,#07111f 0%,#0b1629 54%,#08111f 100%)} a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:26px 0 38px}.hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.055));box-shadow:var(--shadow);backdrop-filter:blur(18px);padding:34px}.hero:before{content:"";position:absolute;right:-90px;top:-110px;width:390px;height:390px;background:radial-gradient(circle,rgba(34,211,238,.28),transparent 62%)}.hero:after{content:"";position:absolute;left:-90px;bottom:-130px;width:390px;height:390px;background:radial-gradient(circle,rgba(59,130,246,.24),transparent 64%)}
+    .top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:14px}.logo{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(220,242,255,.86));box-shadow:0 14px 34px rgba(34,211,238,.16)}.brand h1{margin:0;font-size:20px}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px}.status{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;border:1px solid rgba(34,197,94,.28);background:rgba(34,197,94,.12);color:#bbf7d0;font-size:12px;font-weight:800}.status:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}
+    .headline{position:relative;z-index:1;margin:42px 0 16px;max-width:900px;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-1px}.headline span{background:linear-gradient(90deg,#fff,#b8ecff 48%,#86efac);-webkit-background-clip:text;background-clip:text;color:transparent}.sub{position:relative;z-index:1;margin:0;max-width:850px;color:#d7e4f5;font-size:18px;line-height:1.85}.sub strong{color:#fff}.actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:62px;padding:0 24px;border-radius:18px;font-weight:900;font-size:16px;border:1px solid var(--line);box-shadow:0 18px 36px rgba(0,0,0,.24)}.btn.primary{background:linear-gradient(135deg,#22d3ee,#2563eb);color:#fff;border-color:rgba(34,211,238,.42)}.btn.secondary{background:linear-gradient(135deg,#ffffff,#dff7ff);color:#0b2a4a}.btn.ghost{background:rgba(255,255,255,.08);color:#e9f5ff}.badges{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.badge{padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#ddecff;font-size:12px;font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}.card{border:1px solid var(--line);border-radius:24px;background:var(--panel);box-shadow:var(--shadow);backdrop-filter:blur(16px);padding:20px}.card h2,.card h3{margin:0 0 10px}.card h2{font-size:22px}.card h3{font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}.highlight{color:#fff;font-weight:800}.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 12px}.section-title h2{margin:0;font-size:26px}.section-title p{margin:0;color:var(--muted);font-size:13px}.wide{grid-column:span 2}.notice{margin-top:16px;border:1px solid rgba(251,191,36,.22);background:rgba(251,191,36,.08);border-radius:22px;padding:16px;color:#fde68a;font-size:13px;line-height:1.8}.footer{margin-top:20px;text-align:center;color:#8ea3ba;font-size:13px}
+    @media(max-width:860px){.top{align-items:flex-start;flex-direction:column}.headline{font-size:clamp(38px,13vw,64px)}.sub{font-size:16px}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.btn{width:100%}.hero{padding:24px}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero">
-      <div class="brandline">
-        <div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="18" width="32" height="28" rx="10" stroke="#2f80ed" stroke-width="3"/><circle cx="24" cy="30" r="3" fill="#06b6d4"/><circle cx="40" cy="30" r="3" fill="#06b6d4"/><path d="M25 40c2.6 2.2 5.5 3.3 7 3.3S36.4 42.2 39 40" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/><path d="M32 9v7M18 12l4 6M46 12l-4 6" stroke="#2f80ed" stroke-width="3" stroke-linecap="round"/></svg></div>
-        <div class="brandtext"><h1>Free2AI</h1><p>README-driven AI relay theme</p></div>
+      <div class="top">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="18" width="32" height="28" rx="10" stroke="#2563eb" stroke-width="3"/><circle cx="24" cy="30" r="3" fill="#06b6d4"/><circle cx="40" cy="30" r="3" fill="#06b6d4"/><path d="M25 40c2.6 2.2 5.5 3.3 7 3.3S36.4 42.2 39 40" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/><path d="M32 9v7M18 12l4 6M46 12l-4 6" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/></svg></div>
+          <div><h1>Free2AI</h1><p>免费 AI API 中转导航</p></div>
+        </div>
+        <div class="status">免费试用友好入口</div>
       </div>
 
-      <h2 class="headline">高端 AI 中转导航</h2>
-      <p class="copy">这是一个围绕 README 主题打造的宣传型首页，主打两个高频跳转按钮：`free2ai.pages.dev` 作为主站入口，`pay.kklt.lol` 作为中转服务入口。页面以 GPT5、Claude6、Gemini、OpenAI API 和 AIGC 轻量接入为核心，强调清晰、稳重、可点击、可传播的展示效果。</p>
+      <h2 class="headline"><span>免费 AI API 中转</span><br>低成本调用 GPT5.5 / Claude</h2>
+      <p class="sub"><strong>不用到处找失效链接。</strong>Free2AI 聚合 AI API 中转、GPT5.5、Claude、Gemini、OpenAI API、ChatGPT relay 与 AIGC 工具入口，适合开发测试、自动化脚本、机器人和内容生成工作流快速接入。</p>
 
       <div class="actions">
-        <a class="btn primary" href="https://pay.kklt.lol/" target="_blank" rel="noopener noreferrer">进入服务入口</a>
-        <a class="btn secondary" href="https://free2ai.pages.dev/" target="_blank" rel="noopener noreferrer">访问 Free2AI 主站</a>
-        <a class="btn ghost" href="#readme">查看 README 主题</a>
+        <a class="btn primary" href="https://pay.kklt.lol/" target="_blank" rel="noopener noreferrer">立即进入 AI 中转服务</a>
+        <a class="btn secondary" href="https://free2ai.pages.dev/" target="_blank" rel="noopener noreferrer">打开 Free2AI 免费导航</a>
+        <a class="btn ghost" href="https://t.me/kkscshop" target="_blank" rel="noopener noreferrer">电报客服咨询</a>
       </div>
 
-      <div class="badge-row">
-        <span class="badge">AI API relay</span>
-        <span class="badge">GPT5</span>
-        <span class="badge">Claude6</span>
+      <div class="badges">
+        <span class="badge">免费试用</span>
+        <span class="badge">AI API</span>
+        <span class="badge">GPT5.5</span>
+        <span class="badge">Claude</span>
         <span class="badge">Gemini</span>
-        <span class="badge">AIGC tools</span>
+        <span class="badge">AIGC 工具</span>
       </div>
     </section>
 
-    <div class="layout">
-      <aside class="panel">
-        <h2>页面卖点</h2>
-        <div class="list">
-          <div class="item"><h3>强跳转</h3><p>首页第一屏直接放置两个主按钮，用户一眼就能点到 `pay.kklt.lol` 和 `free2ai.pages.dev`。</p></div>
-          <div class="item"><h3>高质感</h3><p>采用更稳重的配色、卡片层次、玻璃质感面板和大字号标题，视觉上更像一个正式发布页。</p></div>
-          <div class="item"><h3>传播友好</h3><p>文案围绕免费试用、低成本、AI 中转、AIGC 工具和最新模型接入展开，适合直接转发给用户。</p></div>
-        </div>
-      </aside>
-
-      <aside class="panel">
-        <h2>主题定位</h2>
-        <p>Free2AI 不是官方模型服务，也不冒充 OpenAI、Anthropic 或 Google。页面只做信息导航和中转入口整理，帮助用户快速理解 README 主题，并直达对应入口。</p>
-      </aside>
+    <div class="section-title">
+      <h2>为什么适合直接收藏</h2>
+      <p>面向 AI 用户、开发者和 AIGC 创作者</p>
     </div>
-
-    <section class="section panel" id="readme">
-      <div class="section-title">
-        <h2>README 主题</h2>
-        <span>围绕 README.md / README.en.md 的内容展示</span>
-      </div>
-      <div class="grid">
-        <article class="card"><h3>核心定位</h3><p>免费试用、低成本接入、一站式调用、开发者友好导航，适合 GPT5、Claude6、Gemini 与 OpenAI API 场景。</p></article>
-        <article class="card"><h3>服务入口</h3><p>页面显式展示中转服务与主站按钮，重点突出跳转动作，而不是把入口藏在文字里。</p></article>
-        <article class="card"><h3>SEO 结构</h3><p>标题、描述、关键词围绕 AI API、中转、api proxy、ai gateway、ai-router、AIGC tools 组织。</p></article>
-        <article class="card"><h3>免责声明</h3><p>本项目仅为 API 中转信息导航页，不保障第三方服务长期可用，也不承诺免费额度、成功率或官方身份。</p></article>
-      </div>
+    <section class="grid">
+      <article class="card"><h3>免费试用优先</h3><p>先测试、再决定，适合想快速体验 GPT5.5、Claude、Gemini 和 OpenAI API 的用户。</p></article>
+      <article class="card"><h3>低成本 API 中转</h3><p>聚合 <span class="highlight">AI API / api proxy / ai gateway</span> 入口，适合预算敏感的开发和测试场景。</p></article>
+      <article class="card"><h3>一站式跳转</h3><p>服务入口、免费导航、电报客服都放在首屏，打开页面就能直接进入，不再翻群、翻帖、翻历史链接。</p></article>
+      <article class="card wide"><h2>主推入口</h2><p><span class="highlight">pay.kklt.lol</span> 是当前页面重点推荐的 AI 中转服务入口；<span class="highlight">free2ai.pages.dev</span> 是免费 AI 中转导航主站，适合长期收藏和快速查看。</p></article>
+      <article class="card"><h3>覆盖更多 AIGC 场景</h3><p>适合 ChatGPT relay、OpenAI API relay、自动化脚本、AI 工具测试、机器人、内容生成和轻量项目接入。</p></article>
     </section>
 
-    <div class="footer">Free2AI · https://2026codexfree.github.io/ai-api-relay-hub/</div>
+    <div class="notice">免责声明：本页面仅为 AI API 中转信息导航与入口展示，不是 OpenAI、Anthropic、Google 或任何模型厂商的官方服务。使用第三方中转服务前，请自行核验价格、额度、隐私协议、服务条款和稳定性。</div>
+    <div class="footer">Free2AI · 免费 AI API 中转导航 · https://free2ai.pages.dev/</div>
   </main>
 </body>
 </html>
